@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vacuoleRant01</title>
+    <link rel="icon" type="image/png" href="../img/logo.png" />
+
+    <!-- linking css files -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <button id="helpMenuBtn">?</button>
+    <div class="container">
+      <div id="panel" class="title">
+        <a id="logo" href="./home.html"
+          >car<span style="color: orange">Rant</span></a
+        >
+        <a href="./admin.html">ADMIN</a>
+      </div>
+
+      <div class="bgTransparentStyle">
+        <h3 class="title">contact</h3>
+        <h3>Phone: 01*********</h3>
+        <h3>Email: example@gmail.com</h3>
+      </div>
+
+      <div id="newsTricker">
+        <h2 class="title">Routs</h2>
+        <h3>From:</h3>
+        <h3>To:</h3>
+
+        <div style="display: none">
+          <span> From:example place1 To:example2 place</span>
+          <span> From:example place1 To:example2 place</span>
+          <span> From:example place1 To:example2 place</span>
+          <span> From:example place1 To:example2 place</span>
+        </div>
+      </div>
+
+      <div class="slide-container" style="padding: 0px; margin: 0px">
+        <div class="slides">
+          <img src="../img/wallpaper1.jpg" class="active" />
+          <img src="../img/wallpaper2.jpg" />
+          <img src="../img/wallpaper3.jpg" />
+          <img src="../img/wallpaper4.jpg" />
+          <img src="../img/wallpaper5.jpg" />
+        </div>
+
+        <div class="buttons">
+          <span class="next">&#10095;</span>
+          <span class="prev">&#10094;</span>
+        </div>
+
+        <div class="dotsContainer">
+          <div class="dot active" attr="0" onclick="switchImage(this)"></div>
+          <div class="dot" attr="1" onclick="switchImage(this)"></div>
+          <div class="dot" attr="2" onclick="switchImage(this)"></div>
+          <div class="dot" attr="3" onclick="switchImage(this)"></div>
+          <div class="dot" attr="4" onclick="switchImage(this)"></div>
+        </div>
+      </div>
+
+      <div id="searchForm">
+        <h3 class="title">BUY TICKET</h3>
+        <form action="">
+          <ul>
+            <li>
+              <label for="leavingFrom">Leaving From:</label>
+              <br />
+              <select id="leavingFrom">
+                <option value="Place1">Place1</option>
+                <option value="Place2">Place2</option>
+                <option value="Place3">Place3</option>
+                <option value="Place4">Place4</option>
+              </select>
+            </li>
+            <li>
+              <label for="goingTo">Going To:</label>
+              <br />
+              <select id="goingTo">
+                <option value="Place1">Place1</option>
+                <option value="Place2">Place2</option>
+                <option value="Place3">Place3</option>
+                <option value="Place4">Place4</option>
+              </select>
+            </li>
+            <li>
+              <label for="rantTime">Rant Time:</label>
+              <br />
+              <input type="datetime-local" id="rantTime" />
+            </li>
+            <li>
+              <label for="carType">Car Type:</label>
+              <br />
+              <select id="carType">
+                <option value="Auto">Auto</option>
+                <option value="With Ac">With Ac</option>
+                <option value="Without Ac">Without Ac</option>
+              </select>
+            </li>
+          </ul>
+
+          <input type="submit" value="Search" />
+        </form>
+      </div>
+
+      <div id="offer"></div>
+
+      <footer>
+        <div id="otherCompany"></div>
+        <div id="pageInfo"></div>
+      </footer>
+    </div>
+
+    <script src="../js/imageSlider.js"></script>
+  </body>
+</html>

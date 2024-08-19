@@ -1,0 +1,233 @@
+/* ================default css styles================= */
+:root {
+  --textColor: rgb(200, 200, 200);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(15 23 42);
+  color: var(--textColor);
+}
+a {
+  text-decoration: none;
+  color: var(--textColor);
+}
+input,
+button,
+select {
+  outline: none;
+  border: none;
+
+  padding: 4px 6px;
+  margin: 10px 0px;
+  border-radius: 4px;
+
+  background-color: black;
+  color: rgb(0, 200, 200);
+
+  font-weight: bold;
+  font-size: medium;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+/* ================default css styles================= */
+
+/* ================utility css styles================= */
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.container > * {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: large;
+  border-bottom: 1px solid rgb(28, 116, 116);
+}
+
+/* ================utility css styles================= */
+
+/* ================component css styles================= */
+
+.slide-container {
+  position: relative;
+  aspect-ratio: 2/1;
+}
+.slide-container .slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.slide-container .slides img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.slide-container .slides img:not(.active) {
+  top: 0;
+  left: -100%;
+}
+span.next,
+span.prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  color: #eee;
+  font-size: 24px;
+  font-weight: bold;
+  transition: 0.5s;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+span.next {
+  right: 20px;
+}
+span.prev {
+  left: 20px;
+}
+span.next:hover,
+span.prev:hover {
+  background-color: #ede6d6;
+  opacity: 0.8;
+  color: #222;
+}
+.dotsContainer {
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dotsContainer .dot {
+  width: 15px;
+  height: 15px;
+  margin: 0px 2px;
+  border: 3px solid #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+.dotsContainer .active {
+  background-color: rgb(13, 136, 136);
+}
+
+@keyframes next1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes next2 {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes prev1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes prev2 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+/* ================component css styles================= */
+
+#helpMenuBtn {
+  position: fixed;
+  top: 30%;
+  width: 40px;
+  height: 50px;
+  opacity: 0.8;
+  z-index: 2;
+}
+#panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  & > * {
+    color: aqua;
+    background-color: black;
+    font-size: medium;
+    padding: 8px 15px;
+    border-radius: 4px;
+  }
+}
